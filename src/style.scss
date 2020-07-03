@@ -1,0 +1,31 @@
+@import 'variables.scss';
+.avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: gainsboro !important;
+    @include roundedCorners(50);
+    @include linear-gradient($card-bg, $white);
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    color: $dark-blue;
+    .status {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 13px;
+        height: 13px;
+        @include roundedCorners(50);
+        border: 2px solid $white;
+        &.busy {
+            background: $apex-red;
+        }
+        &.online {
+            background: $apex-green;
+        }
+        &.away {
+            background: $apex-yellow;
+        }
+    }
+}
